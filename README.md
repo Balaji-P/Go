@@ -189,3 +189,42 @@ import strings function
             // sprintit into slice
             print(strings.Split("a b c", " "))                               // [a b c]
       }
+
+Variable with Value
+
+    package main
+      import "fmt"
+      func main() {
+            var x = 3
+            fmt.Println(x)        // 3
+            fmt.Printf("%T\n", x) // int
+      }
+
+Variable Parallel Assignment
+
+      package main
+      import "fmt"
+      func main() {
+            var x, y = 3, 4
+            fmt.Println(x, y) // 3 4
+      }
+
+
+Variable Scope
+
+    Variables in a package are local to the package.
+    Variables inside function are local to the function.
+
+      package main
+
+      import "fmt"
+
+      // package level variable
+      var x = 3
+
+      func main() {
+            // function level variable
+            var y = 4
+
+            fmt.Println(x, y) // 3 4
+      }
