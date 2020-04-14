@@ -309,5 +309,4 @@ IF ELSE statement - Shortform
                   fmt.Println("no")
             }
             fmt.Println("yes")
-
      }
