@@ -80,3 +80,23 @@ Printf format values and types
             cannot be nested
             */
       }
+
+Intepreted String Literal
+
+      package main
+      import "fmt"
+      func main() {
+            var x = "ABC and ♥"
+            fmt.Println(x)
+            // abc and ♥
+      }
+
+Literal newline is not allowed
+
+      package main
+      import "fmt"
+      func main() {
+            var x = "ABC \"XYZ\" ♥"
+            fmt.Println(x)
+            // abc and ♥
+      }
