@@ -212,8 +212,8 @@ Variable Parallel Assignment
 
 Variable Scope
 
-    Variables in a package are local to the package.
-    Variables inside function are local to the function.
+   # Variables in a package are local to the package.
+   # Variables inside function are local to the function.
 
       package main
 
