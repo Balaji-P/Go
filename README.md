@@ -49,4 +49,22 @@ Print - it return a string instead of printing.
             var s = fmt.Sprintf("name is %v, age is %v\n", x, y)
             fmt.Println(s == "name is jino, age is 36\n") // false
       }
+
+Printf format values and types
+
+      package main
+      import "fmt"
+      func main() {
+            //v represent for value
+            //T represent by Type
+            var x = 3
+            fmt.Printf("%v\n", x) // 3
+            fmt.Printf("%T\n", x) // int
+
+            var x2 = 3.4
+            fmt.Printf("%v\n", x2) // 3.4
+            fmt.Printf("%T\n", x2) // float64
+
+      }
+
       
