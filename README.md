@@ -216,15 +216,34 @@ Variables in a package are local to the package.
 Variables inside function are local to the function.
 
       package main
-
       import "fmt"
-
       // package level variable
       var x = 3
-
       func main() {
             // function level variable
             var y = 4
-
             fmt.Println(x, y) // 3 4
+      }
+
+Variable Syntax Shortcut Inside Function
+
+      package main
+      import "fmt"
+      func main() {
+            k := 3 // var k = 3
+            fmt.Println(k)
+      }
+
+Grouping Variable Declaration
+
+      package main
+      import "fmt"
+      var (
+            a int
+            b = 2
+            c = "some"
+            d int
+      )
+      func main() {
+            fmt.Println(a, b, c, d) // 0 2 some 0
       }
