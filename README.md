@@ -67,4 +67,16 @@ Printf format values and types
 
       }
 
-      
+  Comment golang
+  
+      package main
+      import "fmt"
+      func main() {
+            // this is a comment - single line
+            fmt.Println(3)
+            /*  -> multiline
+            this is a block comment
+            can contain multiple lines
+            cannot be nested
+            */
+      }
