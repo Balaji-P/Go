@@ -25,14 +25,28 @@ Print Format view - represent Printf
             fmt.Printf("name is %v, age is %#v\n", x, y)
       }
 
-Statement True or False - Print
+Print - it return a string instead of printing.
 
       package main
       import "fmt"
       func main() {
 
-            var x = "JINO"
+            var x = "gino"
             var y = 36
             var s = fmt.Sprintf("name is %v, age is %v\n", x, y)
-            fmt.Println(s == "name is JINO, age is 36\n") // true
+            fmt.Println(s == "name is gino, age is 36\n") // true
       }
+      
+  
+ Print - it return a string instead of printing.
+
+      package main
+      import "fmt"
+      func main() {
+
+            var x = "gino"
+            var y = 36
+            var s = fmt.Sprintf("name is %v, age is %v\n", x, y)
+            fmt.Println(s == "name is jino, age is 36\n") // false
+      }
+      
