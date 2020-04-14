@@ -100,3 +100,92 @@ Literal newline is not allowed
             fmt.Println(x)
             // abc and ♥
       }
+
+If you don't want backslash to have special meaning, use `
+
+      package main
+      import "fmt"
+      var x = `long text
+      many lines
+            tab too`
+
+      func main() {
+            fmt.Printf("%v\n", x)
+            fmt.Printf("%T\n", x)
+      }
+
+String Index
+
+      package main
+      import "fmt"
+      func main() {
+            var x = "abc"
+            fmt.Printf("%#v\n", x[0]) // 0x61
+            fmt.Printf("%#v\n", x[1]) // 0x62
+            fmt.Printf("%#v\n", x[2]) // 0x63
+      }
+
+String Length - len(string) → returns the number of bytes in string.
+
+      package main
+      import "fmt"
+      func main() {
+            var x = "welcome"
+            fmt.Printf("%v\n", len(x))
+            fmt.Printf("%T\n", len(x))
+      }
+
+Sub-string s[n:m] → returns a substring of s from index n to m (excluding m).
+The return value's type is string.
+
+      package main
+      import "fmt"
+      func main() {
+            var x = "012345"
+            fmt.Printf("%#v\n", x[2:3]) // "2"
+            fmt.Printf("%#v\n", x[2:4]) // "23"
+            fmt.Printf("%#v\n", x[2:2]) // ""
+      }
+
+Join String - Use + to join string
+
+      package main
+      import "fmt"
+      func main() {
+            fmt.Printf("%v\n", "a"+"b") // ab
+      }
+
+Embed Expression in String?
+
+      package main
+      import "fmt"
+      func main() {
+            var name = "John"
+            var age = 30
+            var x = fmt.Sprintf("Name: %v, Age: %v", name, age)
+            fmt.Println(x) // Name: John, Age: 30
+      }
+
+import strings function
+
+      package main
+      import (
+            "fmt"
+            "strings"
+      )
+      var print = fmt.Println
+      func main() {
+            print(strings.ToUpper("jino"))                                   //uppercase
+            print(strings.ToLower("WELCOME TO ALL"))                         //lowercase
+            print("ab" == "ab")                                              // 0
+            print(strings.Contains("abcd", "bc"))                            // true
+            print(strings.HasPrefix("abca", "ab"))                           // true
+            print(strings.HasSuffix("abca", "ca"))                           // true
+            print(strings.ToLower("ABC") == "abc")                           // true
+            print(strings.Trim(" abc ", " ") == "abc")                       // true
+            print(strings.Count("abcaab", "ab") == 2)                        // true
+            print(strings.Index("abc", "bc") == 1)                           // true
+            print(strings.Join([]string{"a", "and", "b"}, " ") == "a and b") // true
+            // sprintit into slice
+            print(strings.Split("a b c", " "))                               // [a b c]
+      }
