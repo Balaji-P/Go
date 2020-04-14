@@ -247,3 +247,15 @@ Grouping Variable Declaration
       func main() {
             fmt.Println(a, b, c, d) // 0 2 some 0
       }
+
+Constant variable - Constants are declared like variables, but its value cannot be changed.
+
+      package main
+      import "fmt"
+      func main() {
+            const c1 = 345
+            const c2 = true
+            var c3 = "JINO" 
+            fmt.Println(c1, c2, c3) // 345 true
+      }
+
