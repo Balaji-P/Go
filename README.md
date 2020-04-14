@@ -259,3 +259,55 @@ Constant variable - Constants are declared like variables, but its value cannot 
             fmt.Println(c1, c2, c3) // 345 true
       }
 
+IF Statement
+
+      package main
+      import "fmt"
+      func main() {
+            var x = 3
+            if x > 0 {
+                  fmt.Println("yes")
+            } 
+      }
+
+IF ELSE Statement
+
+      package main
+      import "fmt"
+      func main() {
+            var x = 3
+            if x < 0 {
+                  fmt.Println("yes")
+            } else {
+                  fmt.Println("NO)
+            }
+      }
+
+ELSE IF Statement
+
+      package main
+      import "fmt"
+      func main() {
+            var x = 3
+            if x < 0 {
+                  fmt.Println(-1)
+            } else if x > 0 {
+                  fmt.Println(1)
+            } else {
+                  fmt.Println(0)
+            }
+      }
+
+IF ELSE statement - Shortform
+
+      package main
+      import "fmt"
+      func main() {
+            var x = 3
+            // if statement can start with a short statement
+            if i := -2; x < i {
+                  fmt.Println("no")
+            }
+            fmt.Println("yes")
+
+     }
