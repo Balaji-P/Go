@@ -310,3 +310,29 @@ IF ELSE statement - Shortform
             }
             fmt.Println("yes")
      }
+
+
+Example program
+
+      import (
+            "fmt"
+            "os"
+            "os/exec"
+      )
+
+      func main() {
+            if len(os.Args) == 2 {
+                  var x = os.Args[1]
+                  var cmd = exec.Command(x)
+                  output, err := cmd.Output()
+                  if err != nil {
+                        panic(err)
+                  }
+                  fmt.Println(string(output))
+
+            } else {
+                  fmt.Println("your input is not valid")
+                  os.Exit(1)
+            }
+            fmt.Println("programming end")
+      }
