@@ -361,4 +361,41 @@ example one:
       }
 
 
-      
+      package main
+
+      import "fmt"
+
+      type person struct {
+            firstname string
+            lastname  string
+            contactInfo
+      }
+
+      type contactInfo struct {
+            zipcode int
+            mail    string
+      }
+
+      func main() {
+            jim := person{
+                  firstname: "j",
+                  lastname:  "jinojoe",
+                  contactInfo: contactInfo{
+                        mail:    "jinojoe@gmail.com",
+                        zipcode: 89898,
+                  },
+            }
+
+            jimPointer := &jim
+            jimPointer.updateName("newname")
+            jim.print()
+      }
+
+      func (p person) print() {
+            fmt.Printf("%+v", p)
+      }
+
+      func (p *person) updateName(newname string) {
+            (*p).firstname = newname
+      }
+
