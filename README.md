@@ -395,7 +395,7 @@ example one:
             fmt.Printf("%+v", p)
       }
 
-      func (p *person) updateName(newname string) {
-            (*p).firstname = newname
+      func (pointerToPerson *person) updateName(newname string) {
+            (*pointerToPerson).firstname = newname
       }
 
