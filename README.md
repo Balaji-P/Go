@@ -399,3 +399,44 @@ example one:
             (*pointerToPerson).firstname = newname
       }
 
+
+      package main
+
+      import "fmt"
+
+      type person struct {
+            firstname string
+            lastname  string
+            contactInfo
+      }
+
+      type contactInfo struct {
+            zipcode int
+            mail    string
+      }
+
+      func main() {
+            jim := person{
+                  firstname: "j",
+                  lastname:  "jinojoe",
+                  contactInfo: contactInfo{
+                        mail:    "jinojoe@gmail.com",
+                        zipcode: 89898,
+                  },
+            }
+
+            jimPointer := &jim
+            jimPointer.updateName("newname", "secondNewname", "newMailid", 623402)
+            jim.print()
+      }
+
+      func (p person) print() {
+            fmt.Println(p)
+      }
+
+      func (pointerToPerson *person) updateName(newname string, secondNewName string, newMail string, newZipcode int) {
+            (*pointerToPerson).firstname = newname
+            (*pointerToPerson).lastname = secondNewName
+            (*pointerToPerson).contactInfo.mail = newMail
+            (*pointerToPerson).contactInfo.zipcode = newZipcode
+      }
